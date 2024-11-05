@@ -99,28 +99,24 @@ El nivel de riesgo se determina en base a las siguientes condiciones:
 
 **Condición en código:**
 
-   ```javascript
    return 'Low';
 
 Ejemplos:
 
 - Ejemplo 1: Cliente con bajos ingresos y pagos atrasados:
 
-   ```javascript
    console.log(evaluateRisk(15000, true, 4, true)); // "High"
 
 El cliente tiene ingresos de $15,000, más de 3 pagos atrasados y es estudiante. Cumple con la condición de "alto riesgo".
 
 - Ejemplo 2: Cliente con ingresos medianos y pocos pagos atrasados:
 
-   ```javascript
    console.log(evaluateRisk(30000, false, 1, false)); // "Moderate"
 
 El cliente tiene ingresos de $30,000 y ha tenido solo 1 pago atrasado, por lo que se considera de riesgo moderado.
 
 - Ejemplo 3: Cliente con ingresos altos y sin préstamos ni pagos atrasados:
 
-   ```javascript
    console.log(evaluateRisk(60000, false, 0, false)); // "Low"
 
 El cliente tiene ingresos de $60,000, sin préstamos ni pagos atrasados, por lo que se considera de bajo riesgo.
@@ -136,7 +132,6 @@ purchaseHistory (historial de compras): Un objeto con las cantidades de producto
 
 Ejemplo de purchaseHistory:
 
-   ```javascript
    {
    tech: 6,
    fashion: 1,
@@ -172,14 +167,12 @@ Edad entre 25 y 40 años: Si el usuario tiene entre 25 y 40 años, se recomienda
 
 Condición en código:
 
-   ```javascript
    return 'Generic Product';
 
 Ejemplos:
 
 - Ejemplo 1: Usuario miembro con productos tecnológicos:
 
-   ```javascript
    console.log(recommendProduct(22, true, { tech: 6, fashion: 1, other: 2 })); // "High-Tech Product"
 
 
@@ -187,14 +180,12 @@ El usuario tiene 22 años, es miembro y ha comprado 6 productos tecnológicos, l
 
 - Ejemplo 2: Usuario no miembro con al menos 3 productos comprados:
 
-   ```javascript
    console.log(recommendProduct(26, false, { tech: 1, fashion: 0, other: 2 })); // "Fashion Product"
 
 El usuario tiene 26 años, no es miembro y ha comprado un total de 3 productos (sumando todas las categorías), lo que cumple con la condición para recomendar un producto de moda.
 
 - Ejemplo 3: Usuario sin compras previas:
 
-   ```javascript
    console.log(recommendProduct(45, false, { tech: 0, fashion: 0, other: 0 })); // "Generic Product"
 
 El usuario tiene 45 años, no es miembro y no ha comprado productos, por lo que se le recomienda un producto genérico.
