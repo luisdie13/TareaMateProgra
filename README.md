@@ -80,12 +80,12 @@ El nivel de riesgo se determina en base a las siguientes condiciones:
        return 'High';
    }
 
-2.   Riesgo Moderado ('Moderate'): Si no cumple con las condiciones para alto riesgo, pero:
+2. **Riesgo Moderado** ('Moderate'): Si no cumple con las condiciones para alto riesgo, pero:
 
 - Ingresos medianos y pocos pagos atrasados: Si los ingresos están entre $20,000 y $50,000 y ha tenido 2 o menos pagos atrasados.
 - Préstamos, pero no es estudiante: Si tiene préstamos activos pero no es estudiante.
 
-Condiciones en código:
+**Condiciones en código:**
 
 if (income >= 20000 && income <= 50000 && latePayments <= 2) {
     return 'Moderate';
@@ -94,9 +94,9 @@ if (hasLoans && !isStudent) {
     return 'Moderate';
 }
 
-3. Bajo Riesgo ('Low'): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
+3. **Bajo Riesgo** ('Low'): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
 
-Condición en código:
+**Condición en código:**
 
 return 'Low';
 
@@ -106,22 +106,22 @@ Ejemplos:
 
 console.log(evaluateRisk(15000, true, 4, true)); // "High"
 
-- El cliente tiene ingresos de $15,000, más de 3 pagos atrasados y es estudiante. Cumple con la condición de "alto riesgo".
+El cliente tiene ingresos de $15,000, más de 3 pagos atrasados y es estudiante. Cumple con la condición de "alto riesgo".
 
 - Ejemplo 2: Cliente con ingresos medianos y pocos pagos atrasados:
 
 console.log(evaluateRisk(30000, false, 1, false)); // "Moderate"
 
-- El cliente tiene ingresos de $30,000 y ha tenido solo 1 pago atrasado, por lo que se considera de riesgo moderado.
+El cliente tiene ingresos de $30,000 y ha tenido solo 1 pago atrasado, por lo que se considera de riesgo moderado.
 
 - Ejemplo 3: Cliente con ingresos altos y sin préstamos ni pagos atrasados:
 
 console.log(evaluateRisk(60000, false, 0, false)); // "Low"
 
-- El cliente tiene ingresos de $60,000, sin préstamos ni pagos atrasados, por lo que se considera de bajo riesgo.
+El cliente tiene ingresos de $60,000, sin préstamos ni pagos atrasados, por lo que se considera de bajo riesgo.
 
 
-Ejercicio 2: Explicación
+### Ejercicio 2: Explicación
 
 La función recommendProduct recomienda un producto basado en la edad, membresía y historial de compras del usuario. Recibe tres parámetros:
 
@@ -138,11 +138,11 @@ Ejemplo de purchaseHistory:
 }
 
 
-Lógica de Recomendación
+**Lógica de Recomendación**
 
 La función decide qué tipo de producto recomendar basado en estas condiciones:
 
-1. Producto de Alta Tecnología ('High-Tech Product'):
+1. **Producto de Alta Tecnología** ('High-Tech Product'):
 
 Miembro y al menos 5 productos tecnológicos: Si el usuario es miembro y ha comprado al menos 5 productos tecnológicos, se recomienda un producto tecnológico.
 Edad entre 18 y 30 años y al menos 2 productos de moda: Si el usuario tiene entre 18 y 30 años y ha comprado al menos 2 productos de moda, se recomienda un producto tecnológico.
@@ -156,12 +156,12 @@ if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
     return 'High-Tech Product';
 }
 
-2. Producto de Moda ('Fashion Product'):
+2. **Producto de Moda** ('Fashion Product'):
 
 No miembro y al menos 3 productos en total: Si el usuario no es miembro, pero ha comprado al menos 3 productos en total, se recomienda un producto de moda.
 Edad entre 25 y 40 años: Si el usuario tiene entre 25 y 40 años, se recomienda un producto de moda.
 
-3. Producto Genérico ('Generic Product'): Si el usuario no cumple con las condiciones para productos tecnológicos ni de moda, se recomienda un producto genérico.
+3. **Producto Genérico** ('Generic Product'): Si el usuario no cumple con las condiciones para productos tecnológicos ni de moda, se recomienda un producto genérico.
 
 Condición en código:
 
@@ -175,12 +175,14 @@ console.log(recommendProduct(22, true, { tech: 6, fashion: 1, other: 2 })); // "
 
 
 El usuario tiene 22 años, es miembro y ha comprado 6 productos tecnológicos, lo que cumple con la condición para recomendar un producto tecnológico.
-Ejemplo 2: Usuario no miembro con al menos 3 productos comprados:
+
+- Ejemplo 2: Usuario no miembro con al menos 3 productos comprados:
 
 console.log(recommendProduct(26, false, { tech: 1, fashion: 0, other: 2 })); // "Fashion Product"
 
 El usuario tiene 26 años, no es miembro y ha comprado un total de 3 productos (sumando todas las categorías), lo que cumple con la condición para recomendar un producto de moda.
-Ejemplo 3: Usuario sin compras previas:
+
+- Ejemplo 3: Usuario sin compras previas:
 
 console.log(recommendProduct(45, false, { tech: 0, fashion: 0, other: 0 })); // "Generic Product"
 
