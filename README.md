@@ -106,19 +106,22 @@ Ejemplos:
 
 - Ejemplo 1: Cliente con bajos ingresos y pagos atrasados:
 
-   console.log(evaluateRisk(15000, true, 4, true)); // "High"
+     ```javascript
+     console.log(evaluateRisk(15000, true, 4, true)); // "High"
 
 El cliente tiene ingresos de $15,000, más de 3 pagos atrasados y es estudiante. Cumple con la condición de "alto riesgo".
 
 - Ejemplo 2: Cliente con ingresos medianos y pocos pagos atrasados:
 
-   console.log(evaluateRisk(30000, false, 1, false)); // "Moderate"
+     ```javascript
+     console.log(evaluateRisk(30000, false, 1, false)); // "Moderate"
 
 El cliente tiene ingresos de $30,000 y ha tenido solo 1 pago atrasado, por lo que se considera de riesgo moderado.
 
 - Ejemplo 3: Cliente con ingresos altos y sin préstamos ni pagos atrasados:
 
-   console.log(evaluateRisk(60000, false, 0, false)); // "Low"
+     ```javascript
+     console.log(evaluateRisk(60000, false, 0, false)); // "Low"
 
 El cliente tiene ingresos de $60,000, sin préstamos ni pagos atrasados, por lo que se considera de bajo riesgo.
 
@@ -135,10 +138,10 @@ Ejemplo de purchaseHistory:
 
      ```javascript
      {
-tech: 6,
-fashion: 1,
-other: 2
-}
+     tech: 6,
+     fashion: 1,
+     other: 2
+     }
 
 
 **Lógica de Recomendación**
@@ -150,15 +153,15 @@ La función decide qué tipo de producto recomendar basado en estas condiciones:
 Miembro y al menos 5 productos tecnológicos: Si el usuario es miembro y ha comprado al menos 5 productos tecnológicos, se recomienda un producto tecnológico.
 Edad entre 18 y 30 años y al menos 2 productos de moda: Si el usuario tiene entre 18 y 30 años y ha comprado al menos 2 productos de moda, se recomienda un producto tecnológico.
 
-Condiciones en código:
+**Condiciones en código:**
 
      ```javascript
      if (isMember && purchaseHistory.tech >= 5) {
-    return 'High-Tech Product';
-    }
-    if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
-    return 'High-Tech Product';
-    }
+     return 'High-Tech Product';
+     }
+     if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
+     return 'High-Tech Product';
+     }
 
 2. **Producto de Moda** ('Fashion Product'):
 
@@ -167,9 +170,10 @@ Edad entre 25 y 40 años: Si el usuario tiene entre 25 y 40 años, se recomienda
 
 3. **Producto Genérico** ('Generic Product'): Si el usuario no cumple con las condiciones para productos tecnológicos ni de moda, se recomienda un producto genérico.
 
-Condición en código:
+**Condición en código:**
 
-   return 'Generic Product';
+     ```javascript
+     return 'Generic Product';
 
 Ejemplos:
 
