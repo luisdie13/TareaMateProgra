@@ -82,23 +82,24 @@ El nivel de riesgo se determina en base a las siguientes condiciones:
 
 2. **Riesgo Moderado** ('Moderate'): Si no cumple con las condiciones para alto riesgo, pero:
 
-- Ingresos medianos y pocos pagos atrasados: Si los ingresos están entre $20,000 y $50,000 y ha tenido 2 o menos pagos atrasados.
-- Préstamos, pero no es estudiante: Si tiene préstamos activos pero no es estudiante.
+ - **Ingresos medianos y pocos pagos atrasados:** Si los ingresos están entre $20,000 y $50,000 y ha tenido 2 o menos pagos atrasados.
+ - **Préstamos, pero no es estudiante:** Si tiene préstamos activos pero no es estudiante.
 
-  **Condiciones en código:**
+   **Condiciones en código:**
 
-```javascript
-if (income < 20000 && latePayments > 3) {
-    return 'High';
-}
-if (isStudent && latePayments > 3) {
-    return 'High';
-}
+   ```javascript
+   if (income < 20000 && latePayments > 3) {
+   return 'High';
+   }
+   if (isStudent && latePayments > 3) {
+   return 'High';
+   }
 
-3. **Bajo Riesgo** ('Low'): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
+3. **Bajo Riesgo** (`'Low'`): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
 
-**Condición en código:**
+   **Condición en código:**
 
+   ```javascript
    return 'Low';
 
 Ejemplos:
@@ -132,11 +133,12 @@ purchaseHistory (historial de compras): Un objeto con las cantidades de producto
 
 Ejemplo de purchaseHistory:
 
-   {
-   tech: 6,
-   fashion: 1,
-   other: 2
-   }
+    ```javascript
+    {
+tech: 6,
+fashion: 1,
+other: 2
+}
 
 
 **Lógica de Recomendación**
@@ -150,13 +152,13 @@ Edad entre 18 y 30 años y al menos 2 productos de moda: Si el usuario tiene ent
 
 Condiciones en código:
 
-   ```javascript
-   if (isMember && purchaseHistory.tech >= 5) {
+     ```javascript
+if (isMember && purchaseHistory.tech >= 5) {
     return 'High-Tech Product';
-   }
-   if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
-    return 'High-Tech Product';
-   }
+}
+if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
+return 'High-Tech Product';
+}
 
 2. **Producto de Moda** ('Fashion Product'):
 
@@ -173,19 +175,22 @@ Ejemplos:
 
 - Ejemplo 1: Usuario miembro con productos tecnológicos:
 
-   console.log(recommendProduct(22, true, { tech: 6, fashion: 1, other: 2 })); // "High-Tech Product"
+     ```javascript
+     console.log(recommendProduct(22, true, { tech: 6, fashion: 1, other: 2 })); // "High-Tech Product"
 
 
 El usuario tiene 22 años, es miembro y ha comprado 6 productos tecnológicos, lo que cumple con la condición para recomendar un producto tecnológico.
 
 - Ejemplo 2: Usuario no miembro con al menos 3 productos comprados:
 
-   console.log(recommendProduct(26, false, { tech: 1, fashion: 0, other: 2 })); // "Fashion Product"
+     ```javascript
+     console.log(recommendProduct(26, false, { tech: 1, fashion: 0, other: 2 })); // "Fashion Product"
 
 El usuario tiene 26 años, no es miembro y ha comprado un total de 3 productos (sumando todas las categorías), lo que cumple con la condición para recomendar un producto de moda.
 
 - Ejemplo 3: Usuario sin compras previas:
 
-   console.log(recommendProduct(45, false, { tech: 0, fashion: 0, other: 0 })); // "Generic Product"
+     ```javascript
+     console.log(recommendProduct(45, false, { tech: 0, fashion: 0, other: 0 })); // "Generic Product"
 
 El usuario tiene 45 años, no es miembro y no ha comprado productos, por lo que se le recomienda un producto genérico.
