@@ -85,15 +85,15 @@ El nivel de riesgo se determina en base a las siguientes condiciones:
 - Ingresos medianos y pocos pagos atrasados: Si los ingresos están entre $20,000 y $50,000 y ha tenido 2 o menos pagos atrasados.
 - Préstamos, pero no es estudiante: Si tiene préstamos activos pero no es estudiante.
 
-**Condiciones en código:**
+  **Condiciones en código:**
 
-   ```javascript
-   if (income >= 20000 && income <= 50000 && latePayments <= 2) {
-       return 'Moderate';
-   }
-   if (hasLoans && !isStudent) {
-       return 'Moderate';
-   }
+```javascript
+if (income < 20000 && latePayments > 3) {
+    return 'High';
+}
+if (isStudent && latePayments > 3) {
+    return 'High';
+}
 
 3. **Bajo Riesgo** ('Low'): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
 
