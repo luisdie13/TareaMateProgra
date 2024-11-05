@@ -89,10 +89,10 @@ El nivel de riesgo se determina en base a las siguientes condiciones:
 
    ```javascript
    if (income >= 20000 && income <= 50000 && latePayments <= 2) {
-    return 'Moderate';
+       return 'Moderate';
    }
    if (hasLoans && !isStudent) {
-    return 'Moderate';
+       return 'Moderate';
    }
 
 3. **Bajo Riesgo** ('Low'): Si el cliente no cumple con ninguna de las condiciones anteriores, se considera de bajo riesgo. Esto ocurre cuando tiene pocos o ningún pago atrasado, y/o ingresos estables.
