@@ -133,8 +133,8 @@ purchaseHistory (historial de compras): Un objeto con las cantidades de producto
 
 Ejemplo de purchaseHistory:
 
-    ```javascript
-    {
+     ```javascript
+     {
 tech: 6,
 fashion: 1,
 other: 2
@@ -153,12 +153,12 @@ Edad entre 18 y 30 años y al menos 2 productos de moda: Si el usuario tiene ent
 Condiciones en código:
 
      ```javascript
-if (isMember && purchaseHistory.tech >= 5) {
+     if (isMember && purchaseHistory.tech >= 5) {
     return 'High-Tech Product';
-}
-if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
-return 'High-Tech Product';
-}
+    }
+    if (age >= 18 && age <= 30 && purchaseHistory.fashion >= 2) {
+    return 'High-Tech Product';
+    }
 
 2. **Producto de Moda** ('Fashion Product'):
 
