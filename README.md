@@ -1,41 +1,52 @@
-# Tarea1 Matematica para programacion
+# Tarea 1: Matemática para Programación
 
-<h2>Primera Seccion 1</h2>
+Este repositorio contiene los ejercicios de la tarea 1 de la asignatura Matemática para Programación. Cada ejercicio está detallado con su respectiva solución y explicación. A continuación, encontrarás los ejercicios organizados por secciones.
 
-<h3>Ejercicio A</h3>
-![Seccion1 A](PrimeraSeccion/seccion1a.jpg)
+## Tabla de Contenido
+- [Primera Sección 1](#primera-sección-1)
+- [Primera Sección 2](#primera-sección-2)
+- [Segunda Sección 1](#segunda-sección-1)
+- [Segunda Sección 2](#segunda-sección-2)
 
-<h3>Ejercicio B</h3>
-![Seccion1 B](PrimeraSeccion/seccion1b.jpg)
+---
 
-<h3>Ejercicio C</h3>
-![Seccion1 C](PrimeraSeccion/seccion1c.jpg)
+## Primera Sección 1
 
-<h3>Ejercicio D</h3>
-![Seccion1 D](PrimeraSeccion/seccion1d.jpg)
+### Ejercicio A
+![Sección 1A](PrimeraSeccion/seccion1a.jpg)
 
-<h3>Ejercicio E</h3>
-![Seccion1 E](PrimeraSeccion/seccion1e.jpg)
+### Ejercicio B
+![Sección 1B](PrimeraSeccion/seccion1b.jpg)
 
+### Ejercicio C
+![Sección 1C](PrimeraSeccion/seccion1c.jpg)
 
+### Ejercicio D
+![Sección 1D](PrimeraSeccion/seccion1d.jpg)
 
-<h2>Primera Seccion 2</h2>
+### Ejercicio E
+![Sección 1E](PrimeraSeccion/seccion1e.jpg)
 
-<h3>Ejercicio A</h3>
-![Seccion1 2 A](PrimeraSeccion/seccion2a.jpg)
+---
 
-<h3>Ejercicio B</h3>
-![Seccion1 2 B](PrimeraSeccion/seccion2b.jpg)
+## Primera Sección 2
 
-<h3>Ejercicio C</h3>
-![Seccion1 2 C](PrimeraSeccion/seccion2c.jpg)
+### Ejercicio A
+![Sección 2A](PrimeraSeccion/seccion2a.jpg)
 
-<h3>Ejercicio D</h3>
-![Seccion1 2 D](PrimeraSeccion/seccion2d.jpg)
+### Ejercicio B
+![Sección 2B](PrimeraSeccion/seccion2b.jpg)
 
-<h3>Ejercicio E</h3>
-![Seccion1 2 C](PrimeraSeccion/seccion2e.jpg)
+### Ejercicio C
+![Sección 2C](PrimeraSeccion/seccion2c.jpg)
 
+### Ejercicio D
+![Sección 2D](PrimeraSeccion/seccion2d.jpg)
+
+### Ejercicio E
+![Sección 2E](PrimeraSeccion/seccion2e.jpg)
+
+---
 
 <h2>Segunda Seccion 1</h2>
 
